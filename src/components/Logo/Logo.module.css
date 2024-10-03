@@ -1,0 +1,58 @@
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--primary);
+}
+
+.logoPoint {
+  font-weight: 500;
+  color: var(--green);
+}
+
+.logoPoint.green {
+  color: var(--green);
+}
+
+.logoPoint.blue {
+  color: var(--blue);
+}
+
+.logoPoint.yellow {
+  color: var(--yellow);
+}
+
+.logoAccent {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--green);
+}
+
+.logoAccent.green {
+  color: var(--green);
+}
+
+.logoAccent.blue {
+  color: var(--blue);
+}
+
+.logoAccent.yellow {
+  color: var(--yellow);
+}
+
+@media screen and (max-width: 768px) {
+  .logoContainer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

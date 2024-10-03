@@ -1,0 +1,58 @@
+.btn {
+  width: 100%;
+  border-radius: 30px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  font-family: "Helvetica Neue Medium", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--secondary);
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn.red {
+  background-color: var(--red);
+}
+
+.btn.blue {
+  background-color: var(--blue);
+}
+
+.btn.green {
+  background-color: var(--green);
+}
+
+.btn.yellow {
+  background-color: var(--yellow);
+}
+
+.btn.pink {
+  background-color: var(--pink);
+}
+
+.btn.red:hover {
+  background-color: var(--red-accent);
+}
+
+.btn.blue:hover {
+  background-color: var(--blue-accent);
+}
+
+.btn.green:hover {
+  background-color: var(--green-accent);
+}
+
+.btn.yellow:hover {
+  background-color: var(--yellow-accent);
+}
+
+.btn.pink:hover {
+  background-color: var(--pink-accent);
+}

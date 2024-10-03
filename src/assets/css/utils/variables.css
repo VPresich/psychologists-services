@@ -1,0 +1,38 @@
+:root {
+  --primary: #191a15;
+  --secondary: #fbfbfb;
+
+  --white: #fff;
+
+  --text: rgba(17, 16, 28, 0.5);
+  --text-inactive: rgba(25, 26, 21, 0.3);
+  --border-color: rgba(25, 26, 21, 0.1);
+
+  --price: #38cd3e;
+  --star: #ffc531;
+
+  --default: #8a8a89;
+  --default-accent: #b0adad;
+
+  --green: #54be96;
+  --green-accent: #36a379;
+  --light-green: rgba(84, 190, 150, 0.2);
+
+  --blue: #3470ff;
+  --blue-accent: #255ee8;
+  --light-blue: rgba(52, 112, 255, 0.2);
+
+  --red: #f03f3b;
+  --red-accent: rgba(240, 63, 59, 0.5);
+
+  --pink: #e0a39a;
+  --pink-accent: rgb(224, 163, 154, 0.5);
+
+  --yellow: #fc832c;
+  --yellow-accent: #f37113;
+  --light-yellow: rgba(252, 131, 44, 0.2);
+
+  --section-bgr: #f3f3f3;
+
+  --max-width: 1440px;
+}

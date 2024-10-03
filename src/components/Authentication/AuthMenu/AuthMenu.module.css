@@ -1,0 +1,54 @@
+.authPart {
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.userName {
+  font-family: "Helvetica Neue Medium", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  background-color: transparent;
+  color: var(--secondary);
+}
+
+.btnsWrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.icon.red {
+  fill: var(--red);
+}
+
+.icon.blue {
+  fill: var(--blue);
+}
+
+.icon.green {
+  fill: var(--green);
+}
+
+.icon.yellow {
+  fill: var(--yellow);
+}
+
+.icon.pink {
+  fill: var(--pink);
+}
+
+@media screen and (max-width: 767px) {
+  .authPart {
+    display: none;
+  }
+}
