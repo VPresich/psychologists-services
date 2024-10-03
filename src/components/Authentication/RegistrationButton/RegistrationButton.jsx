@@ -1,17 +1,16 @@
-import { useState } from "react";
-import clsx from "clsx";
+import React, { useState } from "react";
 import { errNotify } from "../../../auxiliary/notification/notification";
 import { ERR_REGISTRATION } from "../Forms/constants";
-import { useDispatch, useSelector } from "react-redux";
-import { selectTheme } from "../../../redux/auth/selectors";
+import { useDispatch } from "react-redux";
 import { register } from "../../../redux/auth/operations";
 import ModalWrapper from "../../UI/ModalWrapper/ModalWrapper";
 import RegisterForm from "../Forms/RegisterForm/RegisterForm";
+import Button from "../../UI/Button/Button";
 import css from "./RegistrationButton.module.css";
 
 const RegistrationButton = ({ handleClick }) => {
   const [showRegisterForm, setShowRegisterForm] = useState(false);
-  const theme = useSelector(selectTheme);
+
   const dispatch = useDispatch();
 
   const handleShowRegister = () => {
@@ -39,20 +38,16 @@ const RegistrationButton = ({ handleClick }) => {
   };
 
   return (
-    <>
-      <button
-        onClick={handleShowRegister}
-        className={clsx(css.btn, css[theme])}
-      >
+    <React.Fragment>
+      <Button onClick={handleShowRegister} btnAuxStyles={css.btnAuxStyles}>
         Registration
-      </button>
-
+      </Button>
       {showRegisterForm && (
         <ModalWrapper onClose={handleCloseRegister}>
           <RegisterForm handleRegistration={handleRegistration} />
         </ModalWrapper>
       )}
-    </>
+    </React.Fragment>
   );
 };
 

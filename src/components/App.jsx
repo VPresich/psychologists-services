@@ -28,10 +28,12 @@ export default function App() {
       {isRefreshing ? (
         <Loader />
       ) : (
-        <AppLayout>
+        <React.Fragment>
           <AppBar />
-          <AppRouter />
-        </AppLayout>
+          <AppLayout>
+            <AppRouter />
+          </AppLayout>
+        </React.Fragment>
       )}
       <Toaster position="top-right" reverseOrder={false} />
     </React.Fragment>

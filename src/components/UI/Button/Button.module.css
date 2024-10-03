@@ -1,58 +1,68 @@
 .btn {
   width: 100%;
   border-radius: 30px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   outline: none;
-  font-family: "Helvetica Neue Medium", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: -0.01em;
+}
+
+.btn.primary {
   color: var(--secondary);
+  background-color: var(--green);
   transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn.red {
-  background-color: var(--red);
-}
-
-.btn.blue {
-  background-color: var(--blue);
-}
-
-.btn.green {
+.btn.primary.green {
   background-color: var(--green);
 }
 
-.btn.yellow {
+.btn.primary.blue {
+  background-color: var(--blue);
+}
+
+.btn.primary.yellow {
   background-color: var(--yellow);
 }
 
-.btn.pink {
-  background-color: var(--pink);
-}
-
-.btn.red:hover {
-  background-color: var(--red-accent);
-}
-
-.btn.blue:hover {
-  background-color: var(--blue-accent);
-}
-
-.btn.green:hover {
+.btn.primary.green:hover {
   background-color: var(--green-accent);
 }
 
-.btn.yellow:hover {
+.btn.primary.blue:hover {
+  background-color: var(--blue-accent);
+}
+
+.btn.primary.green:hover {
+  background-color: var(--green-accent);
+}
+
+.btn.primary.yellow:hover {
   background-color: var(--yellow-accent);
 }
 
-.btn.pink:hover {
-  background-color: var(--pink-accent);
+.btn.secondary {
+  border: 1px solid rgba(25, 26, 21, 0.2);
+  background-color: transparent;
+  color: var(--primary);
+  transition: border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn.secondary.green:hover {
+  border-color: var(--green);
+}
+
+.btn.secondary.blue:hover {
+  border-color: var(--blue);
+}
+
+.btn.secondary.yellow:hover {
+  border-color: var(--yellow);
 }

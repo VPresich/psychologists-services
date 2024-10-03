@@ -1,3 +1,4 @@
+import React from "react";
 import { useSelector } from "react-redux";
 import clsx from "clsx";
 import {
@@ -20,7 +21,7 @@ const AuthMenu = () => {
   return (
     <div className={css.authPart}>
       {isLoggedIn ? (
-        <>
+        <React.Fragment>
           <span className={css.iconContainer}>
             <svg
               className={clsx(css.icon, css[theme])}
@@ -33,7 +34,7 @@ const AuthMenu = () => {
           </span>
           <p className={css.userName}>{`${userName}`}</p>
           <AuthButton>Logout</AuthButton>
-        </>
+        </React.Fragment>
       ) : (
         <>
           <AuthButton>Log In</AuthButton>
