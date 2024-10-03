@@ -6,7 +6,6 @@ import { resetRefreshState } from "../redux/auth/slice";
 import { Toaster } from "react-hot-toast";
 import AppBar from "./AppBar/AppBar";
 import AppRouter from "./AppRouter";
-import AppLayout from "./AppLayout/AppLayout";
 import Loader from "./UI/Loader/Loader";
 
 export default function App() {
@@ -30,9 +29,7 @@ export default function App() {
       ) : (
         <React.Fragment>
           <AppBar />
-          <AppLayout>
-            <AppRouter />
-          </AppLayout>
+          <AppRouter />
         </React.Fragment>
       )}
       <Toaster position="top-right" reverseOrder={false} />

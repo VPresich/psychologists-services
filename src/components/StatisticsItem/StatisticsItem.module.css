@@ -1,0 +1,72 @@
+.container {
+  width: 311px;
+  height: 118px;
+  border-radius: 20px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  display: flex;
+  gap: 16px;
+  flex-shrink: 0;
+  background-color: var(--green);
+}
+
+.container.green {
+  background-color: var(--green);
+}
+
+.container.blue {
+  background-color: var(--blue);
+}
+
+.container.yellow {
+  background-color: var(--yellow);
+}
+
+.iconContainer {
+  border-radius: 13px;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary);
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  fill: var(--green);
+}
+
+.icon.green {
+  fill: var(--green);
+}
+
+.icon.blue {
+  fill: var(--blue);
+}
+
+.icon.yellow {
+  fill: var(--yellow);
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.description {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(251, 251, 251, 0.5);
+}
+
+.value {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--secondary);
+}

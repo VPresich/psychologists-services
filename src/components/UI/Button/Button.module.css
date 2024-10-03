@@ -66,3 +66,28 @@
 .btn.secondary.yellow:hover {
   border-color: var(--yellow);
 }
+
+.btnContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 17px;
+}
+
+.icon {
+  fill: var(--secondary);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover .icon {
+  transform: rotate(53deg);
+  width: 20px;
+}

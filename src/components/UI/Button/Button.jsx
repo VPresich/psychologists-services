@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../../redux/auth/selectors";
+import iconsPath from "../../../assets/img/icons.svg";
 import css from "./Button.module.css";
 import clsx from "clsx";
 
@@ -8,6 +9,7 @@ const Button = ({
   onClick,
   btnAuxStyles,
   isSecondary = false,
+  iconId = "",
   ...props
 }) => {
   const theme = useSelector(selectTheme);
@@ -22,7 +24,16 @@ const Button = ({
       onClick={onClick}
       {...props}
     >
-      {children}
+      <span className={css.btnContent}>
+        {children}
+        {iconId && (
+          <span className={css.iconContainer}>
+            <svg className={clsx(css.icon)} aria-label={`Icons ${iconId}`}>
+              <use href={`${iconsPath}#${iconId}`} />
+            </svg>
+          </span>
+        )}
+      </span>
     </button>
   );
 };

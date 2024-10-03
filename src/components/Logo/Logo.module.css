@@ -1,9 +1,10 @@
-.logoContainer {
+.container {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
-.logoText {
+.text {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 20px;
@@ -12,24 +13,24 @@
   color: var(--primary);
 }
 
-.logoPoint {
+.point {
   font-weight: 500;
   color: var(--green);
 }
 
-.logoPoint.green {
+.point.green {
   color: var(--green);
 }
 
-.logoPoint.blue {
+.point.blue {
   color: var(--blue);
 }
 
-.logoPoint.yellow {
+.point.yellow {
   color: var(--yellow);
 }
 
-.logoAccent {
+.accent {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -38,21 +39,14 @@
   color: var(--green);
 }
 
-.logoAccent.green {
+.accent.green {
   color: var(--green);
 }
 
-.logoAccent.blue {
+.accent.blue {
   color: var(--blue);
 }
 
-.logoAccent.yellow {
+.accent.yellow {
   color: var(--yellow);
-}
-
-@media screen and (max-width: 768px) {
-  .logoContainer {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
 }

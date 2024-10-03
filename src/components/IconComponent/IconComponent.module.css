@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.container.primary {
+  background-color: #4535af;
+  transform: rotate(-15deg);
+}
+
+.container.secondary {
+  background-color: #fbc75e;
+  transform: rotate(15deg);
+}
+
+.icon {
+  fill: var(--secondary);
+}
+
+.icon.primary {
+  width: 10px;
+  height: 17px;
+  transform: rotate(15deg);
+}
+
+.icon.secondary {
+  width: 25px;
+  height: 25px;
+  transform: rotate(-15deg);
+}
