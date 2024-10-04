@@ -5,8 +5,7 @@ import { selectTheme } from "../../redux/auth/selectors";
 import css from "./StatisticsItem.module.css";
 
 const StatisticsComponent = ({ iconId }) => {
-  // const theme = useSelector(selectTheme);
-  const theme = "yellow";
+  const theme = useSelector(selectTheme);
   return (
     <div className={clsx(css.container, css[theme])}>
       <div className={css.iconContainer}>

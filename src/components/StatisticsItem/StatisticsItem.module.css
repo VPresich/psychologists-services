@@ -1,6 +1,5 @@
 .container {
   width: 311px;
-  height: 118px;
   border-radius: 20px;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -69,4 +68,26 @@
   font-weight: 700;
   font-size: 24px;
   color: var(--secondary);
+}
+
+@media screen and (max-width: 768px) {
+  .iconContainer {
+    width: 48px;
+    height: 48px;
+  }
+
+  .value {
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    max-width: 280px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    gap: 8px;
+  }
 }
