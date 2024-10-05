@@ -9,7 +9,7 @@ import { logOut, logIn } from "../../../redux/auth/operations";
 import Button from "../../UI/Button/Button";
 import css from "./AuthButton.module.css";
 
-export default function AuthButton({ children, handleClick }) {
+export default function AuthButton({ children, handleClick, ...props }) {
   const [showLoginForm, setShowLoginForm] = useState(false);
   const dispatch = useDispatch();
 
@@ -45,6 +45,7 @@ export default function AuthButton({ children, handleClick }) {
         onClick={handleButton}
         isSecondary={true}
         btnAuxStyles={css.btnAuxStyles}
+        {...props}
       >
         {children}
       </Button>

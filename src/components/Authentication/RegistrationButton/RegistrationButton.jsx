@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import clsx from "clsx";
 import { errNotify } from "../../../auxiliary/notification/notification";
 import { ERR_REGISTRATION } from "../Forms/constants";
 import { useDispatch } from "react-redux";
@@ -8,7 +9,7 @@ import RegisterForm from "../Forms/RegisterForm/RegisterForm";
 import Button from "../../UI/Button/Button";
 import css from "./RegistrationButton.module.css";
 
-const RegistrationButton = ({ handleClick }) => {
+const RegistrationButton = ({ handleClick, ...props }) => {
   const [showRegisterForm, setShowRegisterForm] = useState(false);
 
   const dispatch = useDispatch();
@@ -39,7 +40,11 @@ const RegistrationButton = ({ handleClick }) => {
 
   return (
     <React.Fragment>
-      <Button onClick={handleShowRegister} btnAuxStyles={css.btnAuxStyles}>
+      <Button
+        onClick={handleShowRegister}
+        btnAuxStyles={clsx(css.btnAuxStyles)}
+        {...props}
+      >
         Registration
       </Button>
       {showRegisterForm && (

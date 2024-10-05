@@ -11,25 +11,31 @@
     display: block;
     position: fixed;
     top: 0px;
-    right: -340px;
-    width: 300px;
-    height: calc(100vh - 16px);
-    background-color: #fff;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background-color: var(--light-green);
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 96px;
-    transition: right 0.3s ease;
     z-index: 102;
-    background-image: url(../../assets/img/homepage/home-bgr@1x.webp);
-    background-position: right;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    border-radius: 30px;
+    transition: right 0.3s ease;
   }
 
   .home {
-    top: 20px;
+    background-color: var(--secondary);
+  }
+
+  .mobileMenu.green {
+    background-color: var(--green);
+  }
+
+  .mobileMenu.blue {
+    background-color: var(--blue);
+  }
+
+  .mobileMenu.yellow {
+    background-color: var(--yellow);
   }
 
   .mobileMenu.open {
@@ -48,12 +54,12 @@
     width: 24px;
     height: 24px;
     fill: transparent;
-    stroke: var(--secondary);
+    stroke: var(--primary);
     transition: stroke 0.3s ease-in-out;
   }
 
   .menuIcon:hover {
-    stroke: var(--default);
+    stroke: var(--green);
   }
 
   .closeBtn {
@@ -76,7 +82,7 @@
     height: 24px;
     fill: transparent;
     stroke-width: 2.5px;
-    stroke: var(--secondary);
+    stroke: var(--primary);
   }
 }
 

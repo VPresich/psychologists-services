@@ -1,13 +1,18 @@
-.container {
+.section {
   width: 100%;
+  padding-top: 160px;
+  padding-bottom: 100px;
+  background-color: var(--section-bgr);
+}
+
+.container {
+  max-width: 1440px;
   padding-left: 128px;
   padding-right: 128px;
-  padding-bottom: 88px;
-  padding-top: 88px;
   display: flex;
   flex-direction: column;
   row-gap: 24px;
-  background-color: var(--section-bgr);
+  margin: 0 auto;
 }
 
 .catalog {
@@ -52,22 +57,31 @@
   color: var(--red);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1124px) {
   .container {
+    max-width: 1124px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding-top: 102px;
+    padding-bottom: 64px;
+  }
+
+  .container {
+    max-width: 768px;
     padding-left: 64px;
     padding-right: 64px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 375px) {
   .container {
-    padding-bottom: 68px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .headerLine {
-    height: 68px;
-    background-color: var(--red);
+    max-width: 375px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

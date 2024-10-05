@@ -5,13 +5,13 @@
 }
 
 .userName {
-  font-family: "Helvetica Neue Medium", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: -0.02em;
   background-color: transparent;
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .btnsWrapper {
@@ -20,31 +20,34 @@
 }
 
 .iconContainer {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
+  background-color: var(--green);
 }
 
-.icon.red {
-  fill: var(--red);
-}
-
-.icon.blue {
-  fill: var(--blue);
+.iconContainer.blue {
+  background-color: var(--blue);
 }
 
 .icon.green {
-  fill: var(--green);
+  background-color: var(--green);
 }
 
-.icon.yellow {
-  fill: var(--yellow);
+.iconContainer.yellow {
+  background-color: var(--yellow);
 }
 
-.icon.pink {
-  fill: var(--pink);
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--secondary);
+  stroke: var(--secondary);
 }
 
 @media screen and (max-width: 767px) {

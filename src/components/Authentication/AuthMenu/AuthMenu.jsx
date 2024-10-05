@@ -22,14 +22,14 @@ const AuthMenu = () => {
     <div className={css.authPart}>
       {isLoggedIn ? (
         <React.Fragment>
-          <span className={css.iconContainer}>
+          <span className={clsx(css.iconContainer, css[theme])}>
             <svg
-              className={clsx(css.icon, css[theme])}
-              aria-label="man icon"
-              width="40"
-              height="40"
+              className={css.icon}
+              aria-label="user icon"
+              width="24"
+              height="24"
             >
-              <use href={`${iconsPath}#${"icon-man"}`} />
+              <use href={`${iconsPath}#icon-user`} />
             </svg>
           </span>
           <p className={css.userName}>{`${userName}`}</p>

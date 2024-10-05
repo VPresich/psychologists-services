@@ -8,7 +8,7 @@ export const axiosInst = axios.create({
 
 export const setAuthHeader = (token) => {
   axiosInst.defaults.headers.common.Authorization = `Bearer ${token}`;
-  axiosInst.defaults.headers.common["X-App-Name"] = "nannies";
+  axiosInst.defaults.headers.common["X-App-Name"] = "psychologists";
 };
 
 export const clearAuthHeader = () => {

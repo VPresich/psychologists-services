@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 import { selectTheme } from "../../redux/auth/selectors";
 import iconsPath from "../../assets/img/icons.svg";
 import AppMobileMenuContent from "../AppMobileMenuContent/AppMobileMenuContent";
@@ -8,16 +8,17 @@ import clsx from "clsx";
 import css from "./AppMobileMenuBtn.module.css";
 
 const AppMobileMenuBtn = () => {
-  const location = useLocation();
   const theme = useSelector(selectTheme);
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <>
+    <React.Fragment>
       <button className={css.menuBtn} onClick={handleClick}>
         <svg
           className={clsx(css.menuIcon, css[theme])}
@@ -29,7 +30,7 @@ const AppMobileMenuBtn = () => {
         </svg>
       </button>
       <div
-        className={clsx(css.mobileMenu, location.pathname === "/" && css.home, {
+        className={clsx(css.mobileMenu, isHome ? css.home : css[theme], {
           [css.open]: isOpen,
         })}
       >
@@ -45,7 +46,7 @@ const AppMobileMenuBtn = () => {
         </button>
         <AppMobileMenuContent onMenuClick={handleClick} />
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

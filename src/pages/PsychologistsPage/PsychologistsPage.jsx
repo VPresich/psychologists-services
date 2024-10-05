@@ -60,31 +60,33 @@ export default function PsychologistsPage() {
   return (
     <>
       <DocumentTitle>Psychologists catalog</DocumentTitle>
-      <section className={css.container}>
+      <section className={css.section}>
         <h2 className="visually-hidden"> Psychologists catalog</h2>
-        <Filters />
-        <div className={css.catalog}>
-          {isLoading ? (
-            <p>Loading...</p>
-          ) : (
-            <>
-              {!error && psychologistsNum > 0 ? (
-                <CardList psychologists={psychologists} />
-              ) : (
-                <p className={clsx(css.text, css[theme])}>
-                  Not found psychologists.
-                </p>
-              )}
-              {isMore && (
-                <Button
-                  onClick={handleLoadMore}
-                  btnAuxStyles={css.btnAuxStyles}
-                >
-                  Load More
-                </Button>
-              )}
-            </>
-          )}
+        <div className={css.container}>
+          <Filters />
+          <div className={css.catalog}>
+            {isLoading ? (
+              <p>Loading...</p>
+            ) : (
+              <>
+                {!error && psychologistsNum > 0 ? (
+                  <CardList psychologists={psychologists} />
+                ) : (
+                  <p className={clsx(css.text, css[theme])}>
+                    Not found psychologists.
+                  </p>
+                )}
+                {isMore && (
+                  <Button
+                    onClick={handleLoadMore}
+                    btnAuxStyles={css.btnAuxStyles}
+                  >
+                    Load More
+                  </Button>
+                )}
+              </>
+            )}
+          </div>
         </div>
       </section>
     </>
