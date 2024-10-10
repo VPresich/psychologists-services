@@ -11,16 +11,26 @@ import Image from "../UI/Image/Image";
 import css from "./Card.module.css";
 
 export default function Card({ psychologist }) {
+  const {
+    _id,
+    name,
+    about,
+    avatar_url,
+    experience,
+    license,
+    specialization,
+    initial_consultation,
+  } = psychologist;
   const [showModal, setShowModal] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
 
   const kinds = [
-    { title: "Experience: ", value: psychologist.experience },
-    { title: "License: ", value: psychologist.license },
-    { title: "Specialization: ", value: psychologist.specialization },
+    { title: "Experience: ", value: experience },
+    { title: "License: ", value: license },
+    { title: "Specialization: ", value: specialization },
     {
       title: "Initial consultation: ",
-      value: psychologist.initial_consultation,
+      value: initial_consultation,
     },
   ];
 
@@ -44,16 +54,16 @@ export default function Card({ psychologist }) {
 
   return (
     <div className={css.container}>
-      <Image imgUrl={psychologist.avatar_url} name="Psychologist photo" />
+      <Image imgUrl={avatar_url} name="Psychologist photo" />
       <div className={css.infoWrapper}>
         <div className={css.firstLine}>
           <div className={css.nameWrapper}>
             <span className={css.label}>Psychologist</span>
-            <p className={css.name}>{psychologist.name} </p>
+            <p className={css.name}>{name} </p>
           </div>
           <CardFeatures psychologist={psychologist} />
           <div className={css.favoriteContainer}>
-            <FavoriteButton id={psychologist._id} />
+            <FavoriteButton id={_id} />
           </div>
         </div>
 
@@ -62,8 +72,8 @@ export default function Card({ psychologist }) {
 
           <div className={css.descrWrapper}>
             <EllipsisText
-              text={psychologist.about}
-              maxLines={3}
+              text={about}
+              maxLines={5}
               className={css.description}
             />
           </div>

@@ -5,11 +5,10 @@
   margin-bottom: 32px;
 }
 
-.reviewer {
-  width: 417px;
+.elem {
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
+  row-gap: 18px;
 }
 
 .title {
@@ -54,39 +53,34 @@
   font-size: 24px;
   line-height: 1.25;
   background: var(--section-bgr);
-  color: var(--default);
+  color: var(--green);
 }
+
 .letter.yellow {
   color: var(--yellow);
-  background: var(--yellow-accent);
+  background: var(--light-yellow);
 }
+
 .letter.green {
   color: var(--green);
-  background: var(--green-accent);
+  background: var(--light-green);
 }
+
 .letter.blue {
   color: var(--blue);
-  background: var(--blue-accent);
-}
-.letter.pink {
-  color: var(--pink);
-  background: var(--pink-accent);
-}
-.letter.red {
-  color: var(--red);
-  background: var(--red-accent);
+  background: var(--light-blue);
 }
 
 .name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  color: var(--default);
+  color: var(--primary);
 }
 
 .comment {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 1.5;
-  color: var(--primary);
+  line-height: 1.25;
+  color: rgba(25, 26, 21, 0.5);
 }

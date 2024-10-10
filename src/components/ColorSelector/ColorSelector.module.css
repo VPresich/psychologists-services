@@ -19,6 +19,7 @@
   border-radius: 8px;
   height: 40px;
   width: 40px;
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn.green {
@@ -31,6 +32,18 @@
 
 .btn.yellow {
   background-color: var(--yellow);
+}
+
+.btn.green:hover {
+  background-color: var(--green-accent);
+}
+
+.btn.blue:hover {
+  background-color: var(--blue-accent);
+}
+
+.btn.yellow:hover {
+  background-color: var(--yellow-accent);
 }
 
 .btn.open .icon {
@@ -55,6 +68,7 @@
   height: 32px;
   border-radius: 50px;
   cursor: pointer;
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .label.green {
@@ -67,6 +81,18 @@
 
 .label.yellow {
   background-color: var(--yellow);
+}
+
+.label.green:hover {
+  background-color: var(--green-accent);
+}
+
+.label.blue:hover {
+  background-color: var(--blue-accent);
+}
+
+.label.yellow:hover {
+  background-color: var(--yellow-accent);
 }
 
 .label input {
