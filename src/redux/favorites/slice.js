@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { logOut } from "../auth/operations";
 import {
-  fetchFavoritesByNannyIds,
+  fetchFavoritesByPsychologistIds,
   fetchFavorites,
   addFavorite,
   removeFavorite,
@@ -19,15 +19,15 @@ const favoritesSlice = createSlice({
 
   extraReducers: (builder) => {
     builder
-      .addCase(fetchFavoritesByNannyIds.pending, (state) => {
+      .addCase(fetchFavoritesByPsychologistIds.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(fetchFavoritesByNannyIds.fulfilled, (state, action) => {
+      .addCase(fetchFavoritesByPsychologistIds.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
         state.items = action.payload;
       })
-      .addCase(fetchFavoritesByNannyIds.rejected, (state, action) => {
+      .addCase(fetchFavoritesByPsychologistIds.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       })
@@ -53,7 +53,7 @@ const favoritesSlice = createSlice({
       .addCase(addFavorite.fulfilled, (state, action) => {
         state.isAdding = false;
         state.error = false;
-        state.items.push(action.payload.nanny);
+        state.items.push(action.payload.psychologist);
       })
       .addCase(addFavorite.rejected, (state, action) => {
         state.isLoading = false;
@@ -66,7 +66,7 @@ const favoritesSlice = createSlice({
       })
       .addCase(removeFavorite.fulfilled, (state, action) => {
         const index = state.items.findIndex(
-          (favorite) => favorite._id === action.payload.nanny
+          (favorite) => favorite._id === action.payload.psychologist
         );
         if (index !== -1) {
           state.items.splice(index, 1);

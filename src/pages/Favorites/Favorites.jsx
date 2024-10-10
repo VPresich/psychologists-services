@@ -31,12 +31,12 @@ export default function Favorites() {
         <section className={css.content}>
           <h2 className="visually-hidden"> Favorites</h2>
           {favorites && favorites.length !== 0 ? (
-            <CardsList nannies={favorites} />
+            <CardsList psychologists={favorites} />
           ) : (
-            <Link to="/nannies" className={css.link}>
+            <Link to="/psychologists" className={css.link}>
               <span className={clsx(css.text, css[theme])}>
-                Looks like you have not added any nannies to your favorites
-                yet...
+                Looks like you have not added any psychologists to your
+                favorites yet...
               </span>
             </Link>
           )}

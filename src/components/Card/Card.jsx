@@ -46,8 +46,7 @@ export default function Card({ psychologist }) {
     setShowDetails(!showDetails);
   };
 
-  const handleValues = (values) => {
-    console.log(values);
+  const handleValues = () => {
     setShowModal(false);
     setShowDetails(false);
   };

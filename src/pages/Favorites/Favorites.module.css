@@ -1,4 +1,4 @@
-.container { 
+.container {
   width: 100%;
   padding-left: 128px;
   padding-right: 128px;
@@ -6,7 +6,7 @@
   padding-bottom: 88px;
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
 }
 
 .text {
@@ -17,7 +17,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  color: var(--default);
+  color: var(--green);
   text-align: center;
   margin: 0 auto;
   max-width: 800px;
@@ -27,6 +27,7 @@
 .text.yellow {
   color: var(--yellow);
 }
+
 .text.green {
   color: var(--green);
 }
@@ -35,16 +36,8 @@
   color: var(--blue);
 }
 
-.text.pink {
-  color: var(--pink);
-}
-
-.text.red {
-  color: var(--red);
-}
-
 .text:hover {
-  background-color: var(--default-accent);
+  background-color: var(--green-accent);
   color: var(--white);
 }
 
@@ -57,14 +50,6 @@
 
 .text.blue:hover {
   background-color: var(--blue-accent);
-}
-
-.text.pink:hover {
-  background-color: var(--pink-accent);
-}
-
-.text.red:hover {
-  background-color: var(--red-accent);
 }
 
 @media screen and (max-width: 1024px) {

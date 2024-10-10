@@ -1,11 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { axiosInst } from "../../api/axiosInst";
 
-export const fetchFavoritesByNannyIds = createAsyncThunk(
-  "nannies/getFavoritsByNannyIds",
+export const fetchFavoritesByPsychologistIds = createAsyncThunk(
+  "psychologists/getFavoritsByPsychologistIds",
   async (ids, thunkAPI) => {
     try {
-      const promises = ids.map((id) => axiosInst.get(`nannies/${id}`));
+      const promises = ids.map((id) => axiosInst.get(`psychologists/${id}`));
       const responses = await Promise.all(promises);
       const data = responses.map((response) => response.data);
       return data;
@@ -19,7 +19,7 @@ export const fetchFavorites = createAsyncThunk(
   "favorites/fetchAll",
   async (_, thunkAPI) => {
     try {
-      const response = await axiosInst.get(`nannies/favorites`);
+      const response = await axiosInst.get(`psychologists/favorites`);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -29,10 +29,11 @@ export const fetchFavorites = createAsyncThunk(
 
 export const addFavorite = createAsyncThunk(
   "favorites/addFavorite",
-  async (idNanny, thunkAPI) => {
+  async (idPsychologist, thunkAPI) => {
     try {
-      console.log("idNanny", idNanny);
-      const response = await axiosInst.post(`nannies/favorites/${idNanny}`);
+      const response = await axiosInst.post(
+        `psychologists/favorites/${idPsychologist}`
+      );
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -42,9 +43,11 @@ export const addFavorite = createAsyncThunk(
 
 export const removeFavorite = createAsyncThunk(
   "favorites/removeFavorite",
-  async (idNanny, thunkAPI) => {
+  async (idPsychologist, thunkAPI) => {
     try {
-      const response = await axiosInst.delete(`nannies/favorites/${idNanny}`);
+      const response = await axiosInst.delete(
+        `psychologists/favorites/${idPsychologist}`
+      );
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

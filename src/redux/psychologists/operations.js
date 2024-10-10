@@ -4,7 +4,6 @@ import { axiosInst } from "../../api/axiosInst";
 export const getPsychologistsPerPage = createAsyncThunk(
   "psychologists/getPage",
   async ({ page, limit }, thunkAPI) => {
-    console.log("page: ", page, "limit:", limit);
     try {
       const response = await axiosInst.get(`psychologists`, {
         params: {
@@ -12,7 +11,6 @@ export const getPsychologistsPerPage = createAsyncThunk(
           limit,
         },
       });
-      console.log("Psyhologists:", response.data);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

@@ -51,7 +51,7 @@ export default function PsychologistsPage() {
         sort: sortParam,
       })
     );
-    // isLoggedIn && dispatch(fetchFavorites());
+    isLoggedIn && dispatch(fetchFavorites());
   }, [dispatch, currentPage, itemsPerPage, isLoggedIn, queryParams, sortParam]);
 
   const handleLoadMore = () => {
