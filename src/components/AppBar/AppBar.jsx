@@ -10,6 +10,8 @@ import css from "./AppBar.module.css";
 
 export default function AppBar() {
   const headerRef = useRef(null);
+  const location = useLocation();
+
   const handleScroll = () => {
     if (headerRef.current) {
       const scrollPos = window.scrollY;
@@ -27,7 +29,7 @@ export default function AppBar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const location = useLocation();
+
   return (
     <React.Fragment>
       <header

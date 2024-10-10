@@ -8,17 +8,18 @@ import { feedbackSchema } from "./feedbackSchema.js";
 import { DROPDOWNOPTIONS } from "./constants.js";
 import css from "./MakeAppoitmentFormContent.module.css";
 
-export default function MakeAppoitmentFormContent({ nanny, handleValues }) {
-  const { avatar_url, name } = nanny;
+export default function MakeAppoitmentFormContent({
+  psychologist,
+  handleValues,
+}) {
+  const { avatar_url, name } = psychologist;
   const methods = useForm({
     resolver: yupResolver(feedbackSchema),
     defaultValues: {
-      address: "",
+      name: "",
       phone: "",
-      childage: "",
       time: "",
       email: "",
-      parentname: "",
       comment: "",
     },
   });
@@ -34,41 +35,35 @@ export default function MakeAppoitmentFormContent({ nanny, handleValues }) {
       <form onSubmit={handleSubmit(onSubmit)} className={css.form}>
         <div className={css.content}>
           <div className={css.titleContainer}>
-            <h3 className={css.title}>Make an appointment with a babysitter</h3>
+            <h3 className={css.title}>
+              Make an appointment with a psychologists
+            </h3>
             <p className={css.text}>
-              Arranging a meeting with a caregiver for your child is the first
-              step to creating a safe and comfortable environment. Fill out the
-              form below so we can match you with the perfect care partner.
+              You are on the verge of changing your life for the better. Fill
+              out the short form below to book your personal appointment with a
+              professional psychologist. We guarantee confidentiality and
+              respect for your privacy.
             </p>
-            <div className={css.nannyWrapper}>
+            <div className={css.psychologistWrapper}>
               <div className={css.avatarWrapper}>
                 <img className={css.img} src={avatar_url} alt={name} />
               </div>
               <div className={css.nameWrapper}>
-                <span className={css.nannyLabel}>Your nanny</span>
-                <span className={css.nannyName}>{name}</span>
+                <span className={css.label}>Your psychologist</span>
+                <span className={css.name}>{name}</span>
               </div>
             </div>
           </div>
 
           <div className={css.inputsWrapper}>
-            <div className={css.wrapperShortInputs}>
-              <Controller
-                name="address"
-                control={methods.control}
-                render={({ field }) => (
-                  <Input {...field} placeholder="Address" type="text" />
-                )}
-              />
+            <Controller
+              name="name"
+              control={methods.control}
+              render={({ field }) => (
+                <Input {...field} placeholder="Name" type="text" />
+              )}
+            />
 
-              <Controller
-                name="childage"
-                control={methods.control}
-                render={({ field }) => (
-                  <Input {...field} placeholder="Child's age" type="text" />
-                )}
-              />
-            </div>
             <div className={css.wrapperShortInputs}>
               <Controller
                 name="phone"
@@ -99,17 +94,6 @@ export default function MakeAppoitmentFormContent({ nanny, handleValues }) {
             />
 
             <Controller
-              name="parentname"
-              control={methods.control}
-              render={({ field }) => (
-                <Input
-                  {...field}
-                  placeholder="Father's or mother's name"
-                  type="text"
-                />
-              )}
-            />
-            <Controller
               name="comment"
               control={methods.control}
               render={({ field }) => (
@@ -117,9 +101,7 @@ export default function MakeAppoitmentFormContent({ nanny, handleValues }) {
               )}
             />
           </div>
-          <Button type="submit" btnAuxStyles={css.btnAuxStyles}>
-            Send
-          </Button>
+          <Button type="submit">Send</Button>
         </div>
       </form>
     </FormProvider>

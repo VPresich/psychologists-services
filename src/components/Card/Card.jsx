@@ -107,7 +107,7 @@ export default function Card({ psychologist }) {
       {showModal && (
         <ModalWrapper onClose={handleClose}>
           <MakeAppoitmentFormContent
-            nanny={psychologist}
+            psychologist={psychologist}
             handleValues={handleValues}
           />
         </ModalWrapper>

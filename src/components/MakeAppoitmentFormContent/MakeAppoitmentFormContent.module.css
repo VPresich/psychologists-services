@@ -5,7 +5,7 @@
 
 .content {
   display: flex;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   flex-direction: column;
   row-gap: 40px;
 }
@@ -25,13 +25,13 @@
   color: var(--primary);
 }
 
-.nannyWrapper {
+.psychologistWrapper {
   display: flex;
   gap: 14px;
 }
 
 .avatarWrapper {
-  border-radius: 50%;
+  border-radius: 15px;
   width: 44px;
   height: 44px;
   display: flex;
@@ -39,7 +39,7 @@
 }
 
 .imp {
-  border-radius: 50%;
+  border-radius: 15px;
 }
 
 .nameWrapper {
@@ -47,7 +47,7 @@
   flex-direction: column;
 }
 
-.nannyLabel {
+.label {
   font-family: inherit;
   font-weight: 500;
   font-size: 12px;
@@ -55,8 +55,8 @@
   color: var(--default);
 }
 
-.nannyName {
-  font-family: "Helvetica Neue Medium";
+.name {
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
@@ -67,8 +67,8 @@
   font-family: inherit;
   font-weight: 400;
   font-size: 16px;
-  line-height: 137%;
-  color: rgba(18, 20, 23, 0.8);
+  line-height: 1.25;
+  color: rgba(25, 26, 21, 0.5);
 }
 
 .inputsWrapper {
@@ -81,14 +81,6 @@
   display: flex;
   width: 100%;
   gap: 8px;
-}
-
-.btnAuxStyles {
-  background-color: var(--red);
-}
-
-.btnAuxStyles:hover {
-  background-color: var(--red-accent);
 }
 
 @media screen and (max-width: 768px) {
