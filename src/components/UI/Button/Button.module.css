@@ -32,10 +32,6 @@
   background-color: var(--yellow);
 }
 
-.btn.primary.green:hover {
-  background-color: var(--green-accent);
-}
-
 .btn.primary.blue:hover {
   background-color: var(--blue-accent);
 }

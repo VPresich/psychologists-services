@@ -28,7 +28,7 @@ export default function LoginForm({ handleLogin }) {
             <h3 className={css.title}>Log In</h3>
             <p className={css.text}>
               Welcome back! Please enter your credentials to access your account
-              and continue your search for an teacher.
+              and continue your search for a psychologist.
             </p>
           </div>
           <div className={css.inputsWrapper}>
@@ -47,9 +47,7 @@ export default function LoginForm({ handleLogin }) {
               )}
             />
           </div>
-          <Button type="submit" btnAuxStyles={css.btnAuxStyles}>
-            Log in
-          </Button>
+          <Button type="submit">Log in</Button>
         </div>
       </form>
     </FormProvider>

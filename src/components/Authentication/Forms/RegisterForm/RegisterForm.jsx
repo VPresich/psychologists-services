@@ -15,7 +15,7 @@ export default function RegisterForm({ handleRegistration }) {
     },
   });
   const { handleSubmit } = methods;
-  const onSubmit = async (values) => {   
+  const onSubmit = async (values) => {
     handleRegistration(values);
   };
   return (
@@ -27,7 +27,7 @@ export default function RegisterForm({ handleRegistration }) {
             <p className={css.text}>
               Thank you for your interest in our platform! In order to register,
               we need some information. Please provide us with the following
-              information
+              information.
             </p>
           </div>
           <div className={css.inputsWrapper}>
@@ -53,9 +53,7 @@ export default function RegisterForm({ handleRegistration }) {
               )}
             />
           </div>
-          <Button type="submit" btnAuxStyles={css.btnAuxStyles}>
-            Sign Up
-          </Button>
+          <Button type="submit">Sign Up</Button>
         </div>
       </form>
     </FormProvider>
